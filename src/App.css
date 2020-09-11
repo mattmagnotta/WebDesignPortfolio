@@ -1,0 +1,403 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #3AAFA9;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bold {
+  color: white !important;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 65px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+
+.boldH2 {
+  color: white !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0 0 22px;
+  text-align: center;
+}
+.boldH2contact {
+  color: white !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 32px;
+
+  text-align: center;
+}
+.boldP {
+  color: white !important;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 19px;
+  line-height: 30px;
+  margin: 0 0 2px;
+  text-align: justify;
+  display: flex;
+  max-width: 1000px
+}
+h1 {
+  color: white
+}
+h2 {
+  color: white
+}
+
+h4 {
+  color: #DEF2F1;
+  font-family:
+}
+
+/* Navigation */
+.link {
+  color: #DAF0EE;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: line-through;
+}
+
+/* Home */
+#logoDiv {
+  height: 75%
+}
+
+#landingContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+@keyframes dash {
+  from {
+    fill: #3AAFA9;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+    animation-fill-mode: backwards;
+    fill: white
+  }
+}
+
+.path {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: dash 2s linear forwards;
+}
+
+/* button */
+#curiosLink {
+  text-decoration: none;
+}
+
+#buttonDiv {
+  animation: cssAnimation 5s forwards;
+}
+
+@keyframes cssAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animated-word {
+  font-family: Helvetica;
+  letter-spacing: 0.1em;
+  font-weight: 15px;
+  font-size: 30px;
+  text-align: center;
+  padding: 4px 4px 4px 4px;
+  color: #DEF2F1;
+  cursor: pointer;
+  max-width: 250px;
+  width: 100%;
+  outline: 3px solid;
+  border-radius: 50%;
+  outline-color: white);
+  transition: all 600ms cubic-bezier(0.2, 0, 0, 0.8);
+}
+
+.animated-word:hover {
+  color: white;
+  outline-color: rgba(71, 126, 232, 0);
+  outline-offset: 300px;
+  border-radius: 40%;
+}
+
+.cls-1 {
+    {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+  }
+}
+
+/* Intro */
+#introcontainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.trails-main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000px;
+  left: -100px
+}
+
+#introHeaders {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  float: left;
+  position: relative;
+  left: 40px;
+  top: 0px;
+  z-index: 1000;
+
+}
+#introTextDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: -60px;
+  justify-content:
+
+}
+.trails-text {
+
+  position: relative;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  color: #DEF2F1;
+  font-size: 5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  will-change: transform, opacity;
+  overflow: hidden;
+}
+
+.trails-text>div {
+  overflow: hidden;
+}
+
+/* about */
+
+
+
+
+.introText {
+  animation: cssAnimation 2s forwards;
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 100;;
+  line-height: 15px;
+  padding-top: 10px;
+
+
+
+
+}
+
+#pText {
+  padding-left: 100px;
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  align-items:flex-start;
+  max-height: 200px !important;
+
+
+}
+
+#aboutDivs{
+    max-height:410px !important;
+  display: flex;
+justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 40px;
+  padding-left: 40px;
+
+
+
+
+}
+
+
+
+/* cards */
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card {
+  width: 45ch;
+  height: 45ch;
+  background: grey;
+  border-radius: 5px;
+  background-image: url(https://i.ibb.co/Kzjn7DR/skillcard-min-1.png);
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s;
+  will-change: transform;
+  border: 15px solid white;
+}
+
+.card:hover {
+  box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+}
+
+#talkDiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* word skills transitions */
+/* form */
+#formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: inherit;
+  position: relative;
+}
+
+#formDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: center;
+  position: relative;
+  left: 0px;
+  top: 200px;
+  z-index: 1000;
+}
+
+/* contact page*/
+#mailImg {
+  position: relative;
+  display: flex;
+  padding-right: 800px
+}
+
+form {
+
+  width: 500px;
+  max-width: 500px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: justify;
+  align-items: center;
+}
+
+#particles {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  onHover: Repulse
+}
+.MuiInputBase-input {
+    font: inherit;
+    color: black !important;
+    width: 100%;
+    border: 0;
+    height: 1.1876em;
+    margin: 0;
+    display: block;
+    padding: 6px 0 7px;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+    animation-name: mui-auto-fill-cancel;
+    letter-spacing: inherit;
+    animation-duration: 10ms;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #3AAFA8 inset !important;
+}
+#thanksWords{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  padding-top: 300px
+
+
+}
+#contactContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+
+/* Resume */
+
+#resumeContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top:70px;
+}
