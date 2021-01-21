@@ -7,11 +7,19 @@ html, body {
   -o-background-size: cover;
   background-size: cover;
 }
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 
+
+}
 .bold {
-  color: white !important;
+  display: flex;
+  flex-shrink: 1;
+  color: white;
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 65px;
+  font-size: 3rem ;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
@@ -27,7 +35,7 @@ html, body {
   margin: 0 0 22px;
   text-align: center;
 }
-.boldH2contact {
+.boldH2 {
   color: white !important;
   font-family: 'Open Sans', sans-serif;
   font-size: 30px;
@@ -36,13 +44,22 @@ html, body {
 
   text-align: center;
 }
+
 .boldP {
   color: white !important;
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 19px;
-  line-height: 30px;
+  font-size:120%;
   margin: 0 0 2px;
   text-align: justify;
+  display: flex;
+  max-width: 1000px
+}
+.boldContactP {
+  color: white !important;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size:120%;
+  margin: 0 0 2px;
+  text-align: left;
   display: flex;
   max-width: 1000px
 }
@@ -161,101 +178,90 @@ a:active {
 }
 
 /* Intro */
+
 #introcontainer{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 0 2px
 }
 .trails-main {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
   cursor: pointer;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000px;
-  left: -100px
+  max-width:90vw
 }
 
 #introHeaders {
   display: flex;
+}
+#introTextContainer{
+  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  float: left;
-  position: relative;
-  left: 40px;
-  top: 0px;
-  z-index: 1000;
-
+  justify-content: center;
+  max-width: 90vw;
+  padding: 0 auto;
 }
 #introTextDiv{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: -60px;
-  justify-content:
+  justify-content:center;
 
 }
 .trails-text {
-
-  position: relative;
+  display: flex;
+  justify-content: flex-start;
   width: 100%;
   height: 80px;
   line-height: 80px;
   color: #DEF2F1;
-  font-size: 5em;
-  font-weight: 800;
+  font-size: 4em;
+  font-weight: 900;
   text-transform: uppercase;
   will-change: transform, opacity;
   overflow: hidden;
-}
 
+}
+.whitespace{
+  height:20px
+}
 .trails-text>div {
   overflow: hidden;
+  justify-content: center;
 }
 
 /* about */
-
-
-
-
 .introText {
-  animation: cssAnimation 2s forwards;
   color:white;
   font-family: 'Open Sans', sans-serif;
-  font-size: 30px;
-  font-weight: 100;;
-  line-height: 15px;
-  padding-top: 10px;
-
-
-
-
+  padding:0 10px;
+  display:flex;
+  justify-content: flex-start
 }
 
 #pText {
   padding-left: 100px;
 }
-
-.aboutContainer {
+#newAboutContainer{
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-
-  align-items:flex-start;
-  max-height: 200px !important;
-
+  flex-shrink:2;
+  flex-direction:column;
+  margin-bottom:100px;
+}
+.aboutContainer {
+  display: inline-flex;
+  max-height: 50vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: red
 
 }
 
-#aboutDivs{
-    max-height:410px !important;
+.aboutDivs{
   display: flex;
-justify-content: center;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   padding-right: 40px;
@@ -263,21 +269,34 @@ justify-content: center;
 
 
 
-
+}
+#WhoWhatWhyContainer{
+  display: flex;
+  background-color: #123764;
+  background-image: url(https://awv3node-homepage.surge.sh/build/assets/stars.svg);
+  flex-wrap: wrap;
+  margin: 20px auto;
+  justify-content: center;
 }
 
-
-
 /* cards */
+#wordsContainer{
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw
+}
 .cardContainer {
   display: flex;
-  flex-direction: row;
+
+  width: 100%;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
 }
 
-.card {
+.animatedCard {
   width: 45ch;
   height: 45ch;
   background: grey;
@@ -291,7 +310,7 @@ justify-content: center;
   border: 15px solid white;
 }
 
-.card:hover {
+.animatedCard:hover {
   box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
 }
 
@@ -304,26 +323,6 @@ justify-content: center;
 
 /* word skills transitions */
 /* form */
-#formContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: inherit;
-  position: relative;
-}
-
-#formDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  float: center;
-  position: relative;
-  left: 0px;
-  top: 200px;
-  z-index: 1000;
-}
 
 /* contact page*/
 #mailImg {
@@ -333,7 +332,6 @@ justify-content: center;
 }
 
 form {
-
   width: 500px;
   max-width: 500px;
   color: white;
@@ -342,30 +340,12 @@ form {
   justify-content: justify;
   align-items: center;
 }
-
-#particles {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  onHover: Repulse
+#projectCardsDiv{
+  display: flex;
+  flex-direction: column;
 }
-.MuiInputBase-input {
-    font: inherit;
-    color: black !important;
-    width: 100%;
-    border: 0;
-    height: 1.1876em;
-    margin: 0;
-    display: block;
-    padding: 6px 0 7px;
-    min-width: 0;
-    background: none;
-    box-sizing: content-box;
-    animation-name: mui-auto-fill-cancel;
-    letter-spacing: inherit;
-    animation-duration: 10ms;
 
-}
+
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -383,12 +363,15 @@ input:-webkit-autofill:active  {
 
 
 }
-#contactContainer{
+#Container{
   display: flex;
   flex-direction: row;
+  margin:0 50px;
+  position: absolute;
   justify-content: center;
-  align-items: center;
-  text-align: justify;
+  margin-top:8%
+
+
 }
 
 
@@ -400,4 +383,126 @@ input:-webkit-autofill:active  {
   align-items: center;
   flex-direction: column;
   padding-top:70px;
+}
+#contactContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: row ;
+  margin: 0 10%
+
+}
+/* ProjectCards */
+#ProjectCardContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: row ;
+  background-color: #123764;
+  background-image: url(https://awv3node-homepage.surge.sh/build/assets/stars.svg);
+  background-size: cover;
+  margin-bottom: 30%
+
+
+}
+#PCContainer{
+  display: flex;
+  flex-shrink: 2;
+  max-width: 500px;
+  flex-direction: row;
+  margin: 15px 15px;
+  max-height: 900px;
+}
+#projectContainer{
+  display: flex;
+  flex-direction: column;
+  margin:0 auto;
+  position: absolute;
+  justify-content: center;
+  margin-top:12%
+
+}
+#ProjectTitle{
+  display: flex;
+  margin:0 auto;
+}
+#footerContent{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+
+}
+
+#SocialIcon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+
+input[type="range"] {
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 2px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 5px;
+  width: 15%;
+  border-radius: 0%;
+  background: #000;
+  margin-top: -4px;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #ccc;
+}
+.carousel-container-with-scrollbar {
+  padding-left: 100px;
+  padding-bottom: 20px;
+  overflow: visible !important;
+}
+.custom-slider {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 20px;
+}
+.custom-slider__input {
+  width: 100%;
+}
+.slider-image-item {
+  padding: 20px 0 20px 20px;
+}
+
+
+
+
+
+/* mobile */
+#MobileAboutContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#MobilePCContainer{
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: column;
+
+}
+#MobilecontactForm{
+  max-width: 300px
 }

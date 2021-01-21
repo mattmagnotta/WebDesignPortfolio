@@ -68,7 +68,7 @@ class Contact extends React.Component {
         <div id="formDiv">
           <form
             color="main"
-            id="contactForm"
+            id="MobilecontactForm"
             onSubmit={this.handleSubmit}
             autoComplete="false"
           >

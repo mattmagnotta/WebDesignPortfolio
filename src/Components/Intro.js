@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useTrail, animated } from 'react-spring'
 
 
-const items = ['Hi, I\'m', 'Matthew','Magnotta']
+const items = ['Hi, I\'m', 'Matthew','Magnotta', ]
 const config = { mass: 5, tension: 2000, friction: 200 }
 
 function Intro() {
@@ -24,7 +24,7 @@ function Intro() {
             key={items[index]}
             className="trails-text"
             style={{ ...rest, transform: x.interpolate(x => `translate3d(0,${x}px,0)`) }}>
-            <animated.div style={{ height }}>{items[index]}</animated.div>
+            <animated.div style={{ height, display:'flex', flexShrink:'1' }}>{items[index]}</animated.div>
           </animated.div>
         ))}
       </div>

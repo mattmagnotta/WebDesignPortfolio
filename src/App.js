@@ -1,4 +1,3 @@
-
 import './App.css';
 import Particles from 'preact-particles';
 // Components
@@ -6,9 +5,9 @@ import NavBar from './Components/NavBar'
 import React from 'react';
 import About from './Components//About'
 import Home from './Components//Home'
-import Contact from './Components//Contact'
+import Contact from './Components/Contact'
 import Resume from './Components/Resume/Resume.js'
-
+import MobileAbout from './Components/MobileAbout'
 //Routing
 import {
   BrowserRouter as Router,
@@ -41,20 +40,15 @@ function App() {
   return (
     <div>
 
-      <Mobile>Mobile</Mobile>
-      <Default>
-
-        <Router>
-
-         <Switch>
+      <Mobile><Router>
+        <Switch>
            <Route exact path="/">
              <Home/>
            </Route>
            <Route exact path="/about">
-             <About/>
+             <MobileAbout/>
            </Route>
            <Route exact path="/skills">
-
            </Route>
            <Route exact path="/contact">
              <Contact/>
@@ -62,12 +56,28 @@ function App() {
            <Route exact path="/resume">
              <Resume/>
            </Route>
-
-
+         </Switch>
+        </Router></Mobile>
+      <Default>
+      <Router>
+        <Switch>
+           <Route exact path="/">
+             <Home/>
+           </Route>
+           <Route exact path="/about">
+             <About/>
+           </Route>
+           <Route exact path="/skills">
+           </Route>
+           <Route exact path="/contact">
+             <Contact/>
+           </Route>
+           <Route exact path="/resume">
+             <Resume/>
+           </Route>
          </Switch>
         </Router>
       </Default>
-
     </div>
  )
 }
